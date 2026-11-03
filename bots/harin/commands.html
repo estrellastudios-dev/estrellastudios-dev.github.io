@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos — Harin — EstrellaStudios</title>
+    <meta name="description" content="Lista completa de comandos del bot Harin de EstrellaStudios, organizados por categorías.">
+    <link rel="icon" href="../../assets/img/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../../assets/img/logo.png">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="brand">
+                <img src="../../assets/img/logo.png" alt="EstrellaStudios" height="32">
+                <span>EstrellaStudios</span>
+            </a>
+            <button class="nav-toggle" aria-label="Abrir menú" onclick="document.body.classList.toggle('nav-open')">☰</button>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../">Bots</a></li>
+                <li><a href="index.html">Harin</a></li>
+                <li><a href="commands.html">Comandos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-bot">
+        <div class="bot-header">
+            <img src="../../assets/img/bots/harin.png" alt="Harin" class="bot-avatar"
+                 onerror="this.style.display='none'">
+            <div>
+                <h1>Comandos de Harin</h1>
+                <p class="tagline">Todos los comandos son slash commands (<code>/comando</code>)</p>
+            </div>
+        </div>
+        <a href="https://discord.com/oauth2/authorize?client_id=786265734493503530&scope=bot%20applications.commands"
+           class="btn btn-primary" target="_blank" rel="noopener">
+            Añadir a Discord
+        </a>
+    </header>
+
+    <main class="container section">
+        <div class="search-wrap">
+            <input type="text" id="cmd-search" class="search-input" placeholder="🔍 Buscar comando... (ej. ban, daily, giveaway)">
+        </div>
+
+        <div class="filters" id="filters">
+            <button class="filter-btn active" data-cat="all">Todos</button>
+            <button class="filter-btn" data-cat="general">🌐 General</button>
+            <button class="filter-btn" data-cat="admin">⚙️ Administración</button>
+            <button class="filter-btn" data-cat="economy">💰 Economía</button>
+            <button class="filter-btn" data-cat="mod">🛡️ Moderación</button>
+            <button class="filter-btn" data-cat="levels">⭐ Niveles</button>
+            <button class="filter-btn" data-cat="giveaways">🎁 Sorteos</button>
+            <button class="filter-btn" data-cat="owner">👑 Dueño</button>
+        </div>
+
+        <p id="no-results" class="no-results" style="display:none;">No se encontraron comandos con ese criterio.</p>
+
+        <section class="cmd-category" data-cat="general">
+            <h2 class="cmd-title">🌐 General</h2>
+            <div class="cmd-grid">
+                <div class="cmd-card" data-name="avatar"><code class="cmd-name">/avatar</code><p>Muestra el avatar de un usuario.</p></div>
+                <div class="cmd-card" data-name="banner"><code class="cmd-name">/banner</code><p>Muestra el banner de un usuario.</p></div>
+                <div class="cmd-card" data-name="botinfo"><code class="cmd-name">/botinfo</code><p>Muestra información del bot.</p></div>
+                <div class="cmd-card" data-name="channelinfo"><code class="cmd-name">/channelinfo</code><p>Muestra información detallada de un canal.</p></div>
+                <div class="cmd-card" data-name="emojis"><code class="cmd-name">/emojis</code><p>Lista todos los emojis del servidor con sus IDs.</p></div>
+                <div class="cmd-card" data-name="events"><code class="cmd-name">/events</code><p>📅 Muestra los eventos globales activos.</p></div>
+                <div class="cmd-card" data-name="help"><code class="cmd-name">/help</code><p>Muestra la lista de comandos disponibles.</p></div>
+                <div class="cmd-card" data-name="ping"><code class="cmd-name">/ping</code><p>Muestra la latencia del bot.</p></div>
+                <div class="cmd-card" data-name="roleinfo"><code class="cmd-name">/roleinfo</code><p>Muestra información detallada de un rol.</p></div>
+                <div class="cmd-card" data-name="servericon"><code class="cmd-name">/servericon</code><p>Muestra el icono del servidor.</p></div>
+                <div class="cmd-card" data-name="serverinfo"><code class="cmd-name">/serverinfo</code><p>Muestra información detallada del servidor.</p></div>
+                <div class="cmd-card" data-name="userinfo"><code class="cmd-name">/userinfo</code><p>Muestra información detallada de un usuario.</p></div>
+            </div>
+        </section>
+
+        <section class="cmd-category" data-cat="admin">
+            <h2 class="cmd-title">⚙️ Administración</h2>
+            <div class="cmd-grid">
+                <div class="cmd-card" data-name="config"><code class="cmd-name">/config</code><p>⚙️ Panel de configuración del servidor.</p></div>
+                <div class="cmd-card" data-name="economyconfig"><code class="cmd-name">/economyconfig</code><p>Configura la economía de este servidor.</p></div>
+                <div class="cmd-card" data-name="levelconfig"><code class="cmd-name">/levelconfig</code><p>Configura el sistema de niveles del servidor.</p></div>
+                <div class="cmd-card" data-name="reset"><code class="cmd-name">/reset</code><p>Reinicia datos del servidor o de un usuario.</p></div>
+                <div class="cmd-card" data-name="warnconfig"><code class="cmd-name">/warnconfig</code><p>Configura el sistema de warns del servidor.</p></div>
+            </div>
+        </section>
+
+        <section class="cmd-category" data-cat="economy">
+            <h2 class="cmd-title">💰 Economía</h2>
+            <div class="cmd-grid">
+                <div class="cmd-card" data-name="achievements"><code class="cmd-name">/achievements</code><p>Ver tus logros o los de otro usuario.</p></div>
+                <div class="cmd-card" data-name="bank"><code class="cmd-name">/bank</code><p>Muestra tu balance bancario y en mano.</p></div>
+                <div class="cmd-card" data-name="blackjack"><code class="cmd-name">/blackjack</code><p>Juega al Blackjack contra el bot.</p></div>
+                <div class="cmd-card" data-name="coinflip"><code class="cmd-name">/coinflip</code><p>Apuesta a cara o cruz.</p></div>
+                <div class="cmd-card" data-name="crime"><code class="cmd-name">/crime</code><p>Comete un crimen para ganar (o perder) dinero.</p></div>
+                <div class="cmd-card" data-name="daily"><code class="cmd-name">/daily</code><p>Reclama tu recompensa diaria.</p></div>
+                <div class="cmd-card" data-name="deposit"><code class="cmd-name">/deposit</code><p>Deposita dinero en el banco.</p></div>
+                <div class="cmd-card" data-name="fish"><code class="cmd-name">/fish</code><p>🐟 Pesca para ganar coins.</p></div>
+                <div class="cmd-card" data-name="horse-race"><code class="cmd-name">/horse-race</code><p>🐎 Crea una carrera de caballos interactiva.</p></div>
+                <div class="cmd-card" data-name="mine"><code class="cmd-name">/mine</code><p>⛏️ Mina para encontrar minerales y ganar coins.</p></div>
+                <div class="cmd-card" data-name="pay"><code class="cmd-name">/pay</code><p>Transfiere coins a otro usuario.</p></div>
+                <div class="cmd-card" data-name="ranking"><code class="cmd-name">/ranking</code><p>Ranking semanal de coins ganados en este servidor.</p></div>
+                <div class="cmd-card" data-name="rob"><code class="cmd-name">/rob</code><p>Intenta robarle coins a otro usuario.</p></div>
+                <div class="cmd-card" data-name="slots"><code class="cmd-name">/slots</code><p>Juega a la tragamonedas.</p></div>
+                <div class="cmd-card" data-name="top"><code class="cmd-name">/top</code><p>Top 10 usuarios más ricos del servidor.</p></div>
+                <div class="cmd-card" data-name="upgrades"><code class="cmd-name">/upgrades</code><p>Compra mejoras para aumentar tus ganancias.</p></div>
+                <div class="cmd-card" data-name="withdraw"><code class="cmd-name">/withdraw</code><p>Retira dinero del banco.</p></div>
+                <div class="cmd-card" data-name="work"><code class="cmd-name">/work</code><p>Trabaja para ganar coins.</p></div>
+            </div>
+        </section>
+
+        <section class="cmd-category" data-cat="mod">
+            <h2 class="cmd-title">🛡️ Moderación</h2>
+            <div class="cmd-grid">
+                <div class="cmd-card" data-name="ban"><code class="cmd-name">/ban</code><p>Banea a un usuario del servidor.</p></div>
+                <div class="cmd-card" data-name="clear"><code class="cmd-name">/clear</code><p>Borra mensajes de un canal.</p></div>
+                <div class="cmd-card" data-name="kick"><code class="cmd-name">/kick</code><p>Expulsa a un usuario del servidor.</p></div>
+                <div class="cmd-card" data-name="lock"><code class="cmd-name">/lock</code><p>Bloquea un canal para que nadie escriba.</p></div>
+                <div class="cmd-card" data-name="modlog"><code class="cmd-name">/modlog</code><p>Muestra el historial de moderación de un usuario.</p></div>
+                <div class="cmd-card" data-name="slowmode"><code class="cmd-name">/slowmode</code><p>Activa o desactiva el modo lento en un canal.</p></div>
+                <div class="cmd-card" data-name="timeout"><code class="cmd-name">/timeout</code><p>Silencia temporalmente a un usuario.</p></div>
+                <div class="cmd-card" data-name="unban"><code class="cmd-name">/unban</code><p>Desbanea a un usuario del servidor.</p></div>
+                <div class="cmd-card" data-name="unlock"><code class="cmd-name">/unlock</code><p>Desbloquea un canal para que todos puedan escribir.</p></div>
+                <div class="cmd-card" data-name="untimeout"><code class="cmd-name">/untimeout</code><p>Quita el timeout de un usuario.</p></div>
+                <div class="cmd-card" data-name="warn"><code class="cmd-name">/warn</code><p>Advierte a un usuario.</p></div>
+                <div class="cmd-card" data-name="warns"><code class="cmd-name">/warns</code><p>Gestiona las advertencias de un usuario.</p></div>
+            </div>
+        </section>
+
+        <section class="cmd-category" data-cat="levels">
+            <h2 class="cmd-title">⭐ Niveles</h2>
+            <div class="cmd-grid">
+                <div class="cmd-card" data-name="leaderboard"><code class="cmd-name">/leaderboard</code><p>🏆 Tabla de clasificación de niveles.</p></div>
+                <div class="cmd-card" data-name="profile"><code class="cmd-name">/profile</code><p>👤 Muestra tu perfil o el de otro usuario.</p></div>
+                <div class="cmd-card" data-name="rank"><code class="cmd-name">/rank</code><p>Muestra tu progreso de nivel.</p></div>
+            </div>
+        </section>
+
+        <section class="cmd-category" data-cat="giveaways">
+            <h2 class="cmd-title">🎁 Sorteos</h2>
+            <div class="cmd-grid">
+                <div class="cmd-card" data-name="giveaway-delete"><code class="cmd-name">/giveaway-delete</code><p>🗑️ Cancela un sorteo sin dar ganador.</p></div>
+                <div class="cmd-card" data-name="giveaway-end"><code class="cmd-name">/giveaway-end</code><p>Termina un sorteo manualmente.</p></div>
+                <div class="cmd-card" data-name="giveaway-list"><code class="cmd-name">/giveaway-list</code><p>📋 Lista los sorteos activos del servidor.</p></div>
+                <div class="cmd-card" data-name="giveaway-reroll"><code class="cmd-name">/giveaway-reroll</code><p>Elige un nuevo ganador de un sorteo terminado.</p></div>
+                <div class="cmd-card" data-name="giveaway"><code class="cmd-name">/giveaway</code><p>Crea un sorteo en el servidor.</p></div>
+            </div>
+        </section>
+
+        <section class="cmd-category" data-cat="owner">
+            <h2 class="cmd-title">👑 Dueño del bot</h2>
+            <div class="cmd-grid">
+                <div class="cmd-card" data-name="owner-events"><code class="cmd-name">/owner-events</code><p>👑 Gestiona eventos globales (solo owner).</p></div>
+                <div class="cmd-card" data-name="owner-guilds"><code class="cmd-name">/owner-guilds</code><p>👑 Gestión de servidores del bot (solo owner).</p></div>
+                <div class="cmd-card" data-name="owner-settings"><code class="cmd-name">/owner-settings</code><p>👑 Configuración de módulos (solo owner).</p></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">© 2026 EstrellaStudios</div>
+    </footer>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        (function() {
+            const searchInput = document.getElementById('cmd-search');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const categories = document.querySelectorAll('.cmd-category');
+            const noResults = document.getElementById('no-results');
+            let activeCat = 'all';
+
+            function updateVisibility() {
+                const q = searchInput.value.toLowerCase().trim();
+                let totalVisible = 0;
+
+                categories.forEach(cat => {
+                    const catId = cat.dataset.cat;
+                    const catMatch = (activeCat === 'all' || activeCat === catId);
+                    let catVisible = 0;
+
+                    cat.querySelectorAll('.cmd-card').forEach(card => {
+                        const name = card.dataset.name.toLowerCase();
+                        const text = card.textContent.toLowerCase();
+                        const match = (q === '' || name.includes(q) || text.includes(q));
+                        const show = catMatch && match;
+                        card.style.display = show ? '' : 'none';
+                        if (show) { catVisible++; totalVisible++; }
+                    });
+
+                    cat.style.display = catVisible > 0 ? '' : 'none';
+                });
+
+                noResults.style.display = totalVisible === 0 ? 'block' : 'none';
+            }
+
+            searchInput.addEventListener('input', updateVisibility);
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeCat = btn.dataset.cat;
+                    updateVisibility();
+                });
+            });
+
+            updateVisibility();
+        })();
+    </script>
+</body>
+</html>

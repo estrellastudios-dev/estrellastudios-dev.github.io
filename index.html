@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstrellaStudios — Bots para Discord</title>
+    <meta name="description" content="EstrellaStudios es un pequeño grupo de desarrollo que crea bots para Discord. Conoce Harin, nuestro bot multifuncional con economía, niveles, moderación y giveaways.">
+    <meta property="og:title" content="EstrellaStudios — Bots para Discord">
+    <meta property="og:description" content="Pequeño grupo de desarrollo dedicado a crear bots para Discord.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/img/logo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="assets/img/logo.png" alt="EstrellaStudios" height="32">
+                <span>EstrellaStudios</span>
+            </a>
+            <button class="nav-toggle" aria-label="Abrir menú" onclick="document.body.classList.toggle('nav-open')">☰</button>
+            <ul class="nav-links">
+                <li><a href="#projects">Proyecto</a></li>
+                <li><a href="bots/">Bots</a></li>
+                <li><a href="#about">Sobre nosotros</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-home">
+        <div class="hero-content">
+            <span class="badge">🌟 EstrellaStudios</span>
+            <h1>Un pequeño estudio que crea bots para Discord</h1>
+            <p class="lead">
+                Somos un grupo pequeño de desarrolladores apasionados por Discord.
+                Diseñamos bots útiles, estables y con políticas claras.
+                Nuestro primer proyecto público es <strong>Harin</strong>: un bot
+                multifuncional con economía, niveles, moderación y giveaways.
+            </p>
+            <div class="hero-actions">
+                <a href="bots/harin/" class="btn btn-primary">Conocer Harin</a>
+                <a href="https://discord.com/oauth2/authorize?client_id=786265734493503530&scope=bot%20applications.commands"
+                   class="btn btn-secondary" target="_blank" rel="noopener">
+                    Añadir Harin a Discord
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Nuestro proyecto</h2>
+            <p class="section-subtitle">
+                Cada bot que desarrollamos tiene su propia documentación legal independiente.
+            </p>
+
+            <div class="bot-grid">
+                <article class="bot-card">
+                    <img src="assets/img/bots/harin.png" alt="Harin" class="bot-logo"
+                         onerror="this.style.display='none'">
+                    <h3>Harin</h3>
+                    <p>Bot multifuncional con economía, niveles, moderación y giveaways.</p>
+                    <div class="bot-links">
+                        <a href="bots/harin/" class="btn btn-small btn-primary">Más info</a>
+                        <a href="bots/harin/commands.html" class="btn btn-small btn-ghost">Comandos</a>
+                        <a href="bots/harin/privacy.html" class="btn btn-small btn-ghost">Privacidad</a>
+                    </div>
+                </article>
+
+                <article class="bot-card bot-card-placeholder">
+                    <div class="placeholder-icon">+</div>
+                    <h3>Próximamente</h3>
+                    <p>Estamos trabajando en nuevos proyectos para EstrellaStudios.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Sobre EstrellaStudios</h2>
+            <p class="section-subtitle">
+                EstrellaStudios es un <strong>grupo pequeño de desarrollo</strong> formado por
+                personas que disfrutan creando herramientas para comunidades de Discord.
+                No somos una empresa grande: somos un equipo reducido que trabaja en sus
+                proyectos con dedicación, transparencia y respeto por los usuarios.
+            </p>
+            <p class="section-subtitle">
+                Cada bot que publicamos incluye sus propias políticas de privacidad y términos
+                de uso. Además, como estudio, tenemos nuestras <strong>políticas generales</strong>
+                que aplican a todo lo que hacemos.
+            </p>
+            <div class="hero-actions" style="justify-content:flex-start;">
+                <a href="https://discord.gg/yXWedmuSxE" class="btn btn-primary" target="_blank" rel="noopener">
+                    Únete al Discord
+                </a>
+                <a href="estudio/privacy.html" class="btn btn-secondary">Privacidad del estudio</a>
+                <a href="estudio/terms.html" class="btn btn-secondary">Términos del estudio</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <strong>EstrellaStudios</strong>
+                <p class="footer-text">Pequeño grupo de desarrollo de bots para Discord.</p>
+            </div>
+            <div>
+                <strong>Legal del estudio</strong>
+                <ul>
+                    <li><a href="estudio/privacy.html">Política de Privacidad</a></li>
+                    <li><a href="estudio/terms.html">Términos de Servicio</a></li>
+                </ul>
+            </div>
+            <div>
+                <strong>Bots</strong>
+                <ul>
+                    <li><a href="bots/harin/">Harin</a></li>
+                    <li><a href="bots/harin/commands.html">Comandos de Harin</a></li>
+                    <li><a href="bots/harin/privacy.html">Privacidad de Harin</a></li>
+                    <li><a href="bots/harin/terms.html">Términos de Harin</a></li>
+                </ul>
+            </div>
+            <div>
+                <strong>Comunidad</strong>
+                <p class="footer-text">
+                    <a href="https://discord.gg/yXWedmuSxE" target="_blank" rel="noopener">Servidor de soporte</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 EstrellaStudios. Todos los derechos reservados.</div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
