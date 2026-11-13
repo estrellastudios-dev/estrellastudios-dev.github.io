@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestions Bot — EstrellaStudios</title>
+    <meta name="description" content="Suggestions Bot es un bot de Discord para gestionar ideas y sugerencias con votaciones persistentes. Desarrollado por EstrellaStudios.">
+    <link rel="icon" href="../../assets/img/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../../assets/img/logo.png">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="brand">
+                <img src="../../assets/img/logo.png" alt="EstrellaStudios" height="32">
+                <span>EstrellaStudios</span>
+            </a>
+            <button class="nav-toggle" aria-label="Abrir menú" onclick="document.body.classList.toggle('nav-open')">☰</button>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../">Bots</a></li>
+                <li><a href="index.html" class="active">Suggestions</a></li>
+                <li><a href="commands.html">Comandos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-bot">
+        <div class="bot-header">
+            <img src="../../assets/img/bots/suggestions.png" alt="Suggestions Bot" class="bot-avatar"
+                 onerror="this.style.display='none'">
+            <div>
+                <h1>Suggestions Bot</h1>
+                <p class="tagline">Gestor de ideas y sugerencias por EstrellaStudios</p>
+            </div>
+        </div>
+        <a href="https://discord.com/oauth2/authorize?client_id=1244043863379808328"
+           class="btn btn-primary" target="_blank" rel="noopener">
+            Invitar al bot
+        </a>
+    </header>
+
+    <main class="container section">
+        <section class="card">
+            <h2>Comandos</h2>
+            <p>Descubre todos los comandos disponibles para gestionar sugerencias en tu servidor.</p>
+            <a href="commands.html" class="btn btn-primary" style="margin-top:12px;">
+                Ver todos los comandos
+            </a>
+        </section>
+
+        <section class="card">
+            <h2>Documentación legal</h2>
+            <p>Conoce las políticas de Suggestions Bot y las condiciones de uso:</p>
+            <div class="links">
+                <a href="privacy.html" class="link-card">
+                    <strong>Política de Privacidad</strong>
+                    <span>Descubre qué datos guardamos en la base de datos.</span>
+                </a>
+                <a href="terms.html" class="link-card">
+                    <strong>Términos y Condiciones</strong>
+                    <span>Consulta las reglas y condiciones de uso.</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Características principales</h2>
+            <ul class="features">
+                <li><strong>Votación Persistente</strong>: Los votos se guardan en PostgreSQL, sobreviven a reinicios.</li>
+                <li><strong>Diseño Premium</strong>: Embeds con barras de progreso visuales y porcentajes.</li>
+                <li><strong>Anti-Doble Voto</strong>: Un voto por usuario, con opción de cambiarlo.</li>
+                <li><strong>Gestión de Estados</strong>: Los admins pueden Aceptar o Denegar sugerencias.</li>
+                <li><strong>Lista Negra</strong>: Bloquea a usuarios problemáticos.</li>
+                <li><strong>Anti-Crash</strong>: Reporta errores a un canal privado de Discord.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">© 2026 EstrellaStudios</div>
+    </footer>
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>

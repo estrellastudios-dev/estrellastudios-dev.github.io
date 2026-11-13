@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad — Suggestions Bot — EstrellaStudios</title>
+    <meta name="description" content="Política de Privacidad del bot de sugerencias de EstrellaStudios.">
+    <link rel="icon" href="../../assets/img/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../../assets/img/logo.png">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="brand">
+                <img src="../../assets/img/logo.png" alt="EstrellaStudios" height="32">
+                <span>EstrellaStudios</span>
+            </a>
+            <button class="nav-toggle" aria-label="Abrir menú" onclick="document.body.classList.toggle('nav-open')">☰</button>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../">Bots</a></li>
+                <li><a href="index.html">Suggestions</a></li>
+                <li><a href="commands.html">Comandos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container section">
+        <article class="card">
+            <h1>Política de Privacidad</h1>
+            <p class="last-updated">Última actualización: <time datetime="2026-11-12">12 de noviembre de 2026</time></p>
+
+            <p>
+                Esta Política de Privacidad describe qué datos recopila <strong>Suggestions Bot</strong>
+                (en adelante, "el Bot"), cómo los usa y qué control tienes sobre ellos.
+            </p>
+
+            <h2>1. Datos que recopilamos</h2>
+            <p>Para proporcionar sus funcionalidades, el Bot almacena los siguientes datos:</p>
+
+            <h3>Datos de sugerencias y votaciones</h3>
+            <ul>
+                <li>ID del autor de la sugerencia.</li>
+                <li>Contenido de texto de la sugerencia.</li>
+                <li>ID del mensaje de Discord donde se publicó la sugerencia.</li>
+                <li>Votos positivos y negativos (solo el ID del usuario y el tipo de voto).</li>
+                <li>Estado de la sugerencia (pendiente, aceptada, denegada).</li>
+                <li>Fecha de creación.</li>
+            </ul>
+
+            <h3>Datos de moderación</h3>
+            <ul>
+                <li>Lista negra (Blacklist): ID de usuario bloqueado, razón y quién lo bloqueó.</li>
+            </ul>
+
+            <h3>Datos técnicos (Logs)</h3>
+            <p>
+                El Bot cuenta con un sistema Anti-Crash que envía informes técnicos (mensajes de error)
+                a un canal privado de Discord mediante Webhooks. Estos logs pueden contener el ID del servidor 
+                y del canal donde ocurrió el error, pero no contenido de conversaciones privadas.
+            </p>
+
+            <h2>2. Cómo usamos los datos</h2>
+            <p>Los datos se usan exclusivamente para:</p>
+            <ul>
+                <li>Mantener el sistema de votación persistente (evitar votos duplicados).</li>
+                <li>Actualizar el diseño visual de la sugerencia (barras de progreso).</li>
+                <li>Gestionar la lista negra para prevenir abusos.</li>
+                <li>Depurar errores técnicos para mejorar la estabilidad del Bot.</li>
+            </ul>
+            <p>No usamos los datos para publicidad, perfilado comercial ni venta a terceros.</p>
+
+            <h2>3. Dónde se almacenan</h2>
+            <p>
+                <strong>Suggestions Bot</strong> utiliza <strong>PostgreSQL (Neon.tech)</strong> como servicio
+                de base de datos en la nube para almacenar la información descrita. Neon es un servicio
+                de terceros que aloja los datos en servidores seguros.
+            </p>
+            <p>Los datos no se envían a servicios externos distintos de:</p>
+            <ul>
+                <li><strong>Neon.tech</strong>, utilizado exclusivamente como base de datos.</li>
+                <li><strong>La API de Discord</strong>, necesaria para el funcionamiento del Bot.</li>
+            </ul>
+
+            <h2>4. Cuánto tiempo se conservan</h2>
+            <ul>
+                <li><strong>Sugerencias y votos</strong>: se conservan indefinidamente para mantener el historial del servidor, a menos que un administrador o el autor solicite su eliminación.</li>
+                <li><strong>Lista negra</strong>: hasta que un administrador decida remover al usuario.</li>
+                <li><strong>Logs Anti-Crash</strong>: Discord conserva los Webhooks según sus propios términos.</li>
+            </ul>
+
+            <h2>5. Eliminación de datos</h2>
+            <p>
+                Si deseas eliminar una sugerencia que publicaste o tus votos, puedes solicitarlo a través
+                de nuestro servidor de soporte:
+                <a href="https://discord.gg/yXWedmuSxE" target="_blank" rel="noopener">https://discord.gg/yXWedmuSxE</a>.
+            </p>
+            <p>
+                Los administradores del servidor también pueden eliminar datos de su servidor
+                eliminando el canal de sugerencias o expulsando al Bot.
+            </p>
+
+            <h2>6. Menores de edad</h2>
+            <p>
+                <strong>Suggestions Bot</strong> no está dirigido a menores de 13 años (o la edad mínima
+                legal en tu país). No recopilamos conscientemente datos de menores.
+            </p>
+
+            <h2>7. Contacto</h2>
+            <p>Para consultas sobre privacidad:</p>
+            <ul>
+                <li>Servidor de soporte: <a href="https://discord.gg/yXWedmuSxE" target="_blank" rel="noopener">https://discord.gg/yXWedmuSxE</a></li>
+            </ul>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">© 2026 EstrellaStudios. Todos los derechos reservados.</div>
+    </footer>
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>

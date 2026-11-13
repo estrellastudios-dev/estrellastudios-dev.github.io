@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos — Suggestions Bot — EstrellaStudios</title>
+    <meta name="description" content="Lista completa de comandos del bot de sugerencias de EstrellaStudios.">
+    <link rel="icon" href="../../assets/img/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../../assets/img/logo.png">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="brand">
+                <img src="../../assets/img/logo.png" alt="EstrellaStudios" height="32">
+                <span>EstrellaStudios</span>
+            </a>
+            <button class="nav-toggle" aria-label="Abrir menú" onclick="document.body.classList.toggle('nav-open')">☰</button>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../">Bots</a></li>
+                <li><a href="index.html">Suggestions</a></li>
+                <li><a href="commands.html" class="active">Comandos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-bot">
+        <div class="bot-header">
+            <img src="../../assets/img/bots/suggestions.png" alt="Suggestions Bot" class="bot-avatar"
+                 onerror="this.style.display='none'">
+            <div>
+                <h1>Comandos de Suggestions Bot</h1>
+                <p class="tagline">Todos los comandos son slash commands (<code>/comando</code>)</p>
+            </div>
+        </div>
+        <a href="https://discord.com/oauth2/authorize?client_id=1244043863379808328"
+           class="btn btn-primary" target="_blank" rel="noopener">
+            Invitar al bot
+        </a>
+    </header>
+
+    <main class="container section">
+        <div class="search-wrap">
+            <input type="text" id="cmd-search" class="search-input" placeholder="🔍 Buscar comando... (ej. sugerir, accept)">
+        </div>
+
+        <div class="filters" id="filters">
+            <button class="filter-btn active" data-cat="all">Todos</button>
+            <button class="filter-btn" data-cat="users">👥 Usuarios</button>
+            <button class="filter-btn" data-cat="admin">🛡️ Administradores</button>
+        </div>
+
+        <p id="no-results" class="no-results" style="display:none;">No se encontraron comandos con ese criterio.</p>
+
+        <section class="cmd-category" data-cat="users">
+            <h2 class="cmd-title">👥 Usuarios</h2>
+            <div class="cmd-grid">
+                <div class="cmd-card" data-name="sugerir">
+                    <code class="cmd-name">/sugerir</code>
+                    <p>Abre un formulario modal para enviar una nueva idea al canal de sugerencias.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cmd-category" data-cat="admin">
+            <h2 class="cmd-title">🛡️ Administradores</h2>
+            <p class="section-subtitle" style="margin-top:-10px; margin-bottom:16px; font-size:0.9rem;">Requieren permisos de Administrador.</p>
+            <div class="cmd-grid">
+                <div class="cmd-card" data-name="suggestion_accept">
+                    <code class="cmd-name">/suggestion_accept</code>
+                    <p>Acepta una sugerencia. El mensaje se vuelve verde y se cierran las votaciones.</p>
+                </div>
+                <div class="cmd-card" data-name="suggestion_deny">
+                    <code class="cmd-name">/suggestion_deny</code>
+                    <p>Deniega una sugerencia. El mensaje se vuelve rojo y se cierran las votaciones.</p>
+                </div>
+                <div class="cmd-card" data-name="suggestion_blacklist_add">
+                    <code class="cmd-name">/suggestion_blacklist_add</code>
+                    <p>Bloquea a un usuario para que no pueda publicar más sugerencias.</p>
+                </div>
+                <div class="cmd-card" data-name="suggestion_blacklist_remove">
+                    <code class="cmd-name">/suggestion_blacklist_remove</code>
+                    <p>Remueve a un usuario de la lista negra.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">© 2026 EstrellaStudios</div>
+    </footer>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        (function() {
+            const searchInput = document.getElementById('cmd-search');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const categories = document.querySelectorAll('.cmd-category');
+            const noResults = document.getElementById('no-results');
+            let activeCat = 'all';
+
+            function updateVisibility() {
+                const q = searchInput.value.toLowerCase().trim();
+                let totalVisible = 0;
+
+                categories.forEach(cat => {
+                    const catId = cat.dataset.cat;
+                    const catMatch = (activeCat === 'all' || activeCat === catId);
+                    let catVisible = 0;
+
+                    cat.querySelectorAll('.cmd-card').forEach(card => {
+                        const name = card.dataset.name.toLowerCase();
+                        const text = card.textContent.toLowerCase();
+                        const match = (q === '' || name.includes(q) || text.includes(q));
+                        const show = catMatch && match;
+                        card.style.display = show ? '' : 'none';
+                        if (show) { catVisible++; totalVisible++; }
+                    });
+
+                    cat.style.display = catVisible > 0 ? '' : 'none';
+                });
+
+                noResults.style.display = totalVisible === 0 ? 'block' : 'none';
+            }
+
+            searchInput.addEventListener('input', updateVisibility);
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeCat = btn.dataset.cat;
+                    updateVisibility();
+                });
+            });
+
+            updateVisibility();
+        })();
+    </script>
+</body>
+</html>
