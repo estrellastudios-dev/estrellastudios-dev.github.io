@@ -35,7 +35,7 @@
                 <p class="tagline">Todos los comandos son slash commands (<code>/comando</code>)</p>
             </div>
         </div>
-        <a href="https://discord.com/oauth2/authorize?client_id=1244043863379808328"
+        <a href="https://discord.com/oauth2/authorize?client_id=1244043863379808328&scope=bot%20applications.commands"
            class="btn btn-primary" target="_blank" rel="noopener">
             Invitar al bot
         </a>
@@ -43,7 +43,7 @@
 
     <main class="container section">
         <div class="search-wrap">
-            <input type="text" id="cmd-search" class="search-input" placeholder="🔍 Buscar comando... (ej. sugerir, accept)">
+            <input type="text" id="cmd-search" class="search-input" placeholder="🔍 Buscar comando... (ej. sugerir, setup, blacklist)">
         </div>
 
         <div class="filters" id="filters">
@@ -57,24 +57,48 @@
         <section class="cmd-category" data-cat="users">
             <h2 class="cmd-title">👥 Usuarios</h2>
             <div class="cmd-grid">
-                <div class="cmd-card" data-name="sugerir">
-                    <code class="cmd-name">/sugerir</code>
-                    <p>Abre un formulario modal para enviar una nueva idea al canal de sugerencias.</p>
+                <div class="cmd-card" data-name="sugerir suggest">
+                    <code class="cmd-name">/sugerir</code> <code class="cmd-name">/suggest</code>
+                    <p>Abre un formulario para enviar una nueva idea al canal de sugerencias.</p>
+                </div>
+                <div class="cmd-card" data-name="help">
+                    <code class="cmd-name">/help</code>
+                    <p>Muestra la lista de comandos y el enlace a las políticas de privacidad.</p>
+                </div>
+                <div class="cmd-card" data-name="ping">
+                    <code class="cmd-name">/ping</code>
+                    <p>Muestra la latencia del bot y de la base de datos.</p>
                 </div>
             </div>
         </section>
 
         <section class="cmd-category" data-cat="admin">
-            <h2 class="cmd-title">🛡️ Administradores</h2>
-            <p class="section-subtitle" style="margin-top:-10px; margin-bottom:16px; font-size:0.9rem;">Requieren permisos de Administrador.</p>
+            <h2 class="cmd-title">🛡️ Administradores y Staff</h2>
+            <p class="section-subtitle" style="margin-top:-10px; margin-bottom:16px; font-size:0.9rem;">Requieren permisos de Administrador o roles de Staff configurados.</p>
             <div class="cmd-grid">
+                <div class="cmd-card" data-name="setup">
+                    <code class="cmd-name">/setup</code>
+                    <p>Configura el canal de sugerencias y el idioma (es/en) para el servidor.</p>
+                </div>
+                <div class="cmd-card" data-name="config">
+                    <code class="cmd-name">/config</code>
+                    <p>Muestra un resumen de la configuración actual del servidor (canal, idioma, staff, etc).</p>
+                </div>
+                <div class="cmd-card" data-name="setup-staff">
+                    <code class="cmd-name">/setup-staff</code>
+                    <p>Añade o quita un rol que pueda gestionar sugerencias (además de los admins).</p>
+                </div>
+                <div class="cmd-card" data-name="custom-embed">
+                    <code class="cmd-name">/custom-embed</code>
+                    <p>Personaliza el color del embed y añade un mensaje sutil extra.</p>
+                </div>
                 <div class="cmd-card" data-name="suggestion_accept">
                     <code class="cmd-name">/suggestion_accept</code>
-                    <p>Acepta una sugerencia. El mensaje se vuelve verde y se cierran las votaciones.</p>
+                    <p>Acepta una sugerencia. El mensaje se vuelve verde y se cierran los votos.</p>
                 </div>
                 <div class="cmd-card" data-name="suggestion_deny">
                     <code class="cmd-name">/suggestion_deny</code>
-                    <p>Deniega una sugerencia. El mensaje se vuelve rojo y se cierran las votaciones.</p>
+                    <p>Deniega una sugerencia. El mensaje se vuelve rojo y se cierran los votos.</p>
                 </div>
                 <div class="cmd-card" data-name="suggestion_blacklist_add">
                     <code class="cmd-name">/suggestion_blacklist_add</code>

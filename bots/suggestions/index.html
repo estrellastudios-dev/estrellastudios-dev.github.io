@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suggestions Bot — EstrellaStudios</title>
-    <meta name="description" content="Suggestions Bot es un bot de Discord para gestionar ideas y sugerencias con votaciones persistentes. Desarrollado por EstrellaStudios.">
+    <meta name="description" content="Suggestions Bot es un bot de Discord multi-servidor y bilingüe para gestionar ideas con votaciones persistentes. Desarrollado por EstrellaStudios.">
     <link rel="icon" href="../../assets/img/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="../../assets/img/logo.png">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -32,10 +32,10 @@
                  onerror="this.style.display='none'">
             <div>
                 <h1>Suggestions Bot</h1>
-                <p class="tagline">Gestor de ideas y sugerencias por EstrellaStudios</p>
+                <p class="tagline">Gestor de ideas multi-servidor y bilingüe por EstrellaStudios</p>
             </div>
         </div>
-        <a href="https://discord.com/oauth2/authorize?client_id=1244043863379808328"
+        <a href="https://discord.com/oauth2/authorize?client_id=1244043863379808328&scope=bot%20applications.commands"
            class="btn btn-primary" target="_blank" rel="noopener">
             Invitar al bot
         </a>
@@ -44,7 +44,7 @@
     <main class="container section">
         <section class="card">
             <h2>Comandos</h2>
-            <p>Descubre todos los comandos disponibles para gestionar sugerencias en tu servidor.</p>
+            <p>Descubre todos los comandos disponibles para configurar y gestionar sugerencias en tu servidor.</p>
             <a href="commands.html" class="btn btn-primary" style="margin-top:12px;">
                 Ver todos los comandos
             </a>
@@ -56,11 +56,11 @@
             <div class="links">
                 <a href="privacy.html" class="link-card">
                     <strong>Política de Privacidad</strong>
-                    <span>Descubre qué datos guardamos en la base de datos.</span>
+                    <span>Descubre qué datos guardamos y cómo funciona el sistema multi-servidor.</span>
                 </a>
                 <a href="terms.html" class="link-card">
                     <strong>Términos y Condiciones</strong>
-                    <span>Consulta las reglas y condiciones de uso.</span>
+                    <span>Consulta las reglas y condiciones de uso del bot.</span>
                 </a>
             </div>
         </section>
@@ -68,12 +68,14 @@
         <section class="card">
             <h2>Características principales</h2>
             <ul class="features">
-                <li><strong>Votación Persistente</strong>: Los votos se guardan en PostgreSQL, sobreviven a reinicios.</li>
-                <li><strong>Diseño Premium</strong>: Embeds con barras de progreso visuales y porcentajes.</li>
-                <li><strong>Anti-Doble Voto</strong>: Un voto por usuario, con opción de cambiarlo.</li>
-                <li><strong>Gestión de Estados</strong>: Los admins pueden Aceptar o Denegar sugerencias.</li>
-                <li><strong>Lista Negra</strong>: Bloquea a usuarios problemáticos.</li>
-                <li><strong>Anti-Crash</strong>: Reporta errores a un canal privado de Discord.</li>
+                <li><strong>Multi-Servidor</strong>: Cada servidor tiene su propio canal, idioma y lista negra sin mezclarse.</li>
+                <li><strong>Idioma por Servidor</strong>: Soporte nativo para Español e Inglés (configurable con <code>/setup</code>).</li>
+                <li><strong>Personalización Total</strong>: Cambia el color del embed, añade mensajes extra y configura roles de staff.</li>
+                <li><strong>Votación Persistente</strong>: Los votos se guardan en PostgreSQL y sobreviven a los reinicios.</li>
+                <li><strong>Diseño Premium</strong>: Embeds modernos con barras de progreso visuales y porcentajes.</li>
+                <li><strong>Anti-Doble Voto</strong>: Un usuario solo puede votar una vez por sugerencia.</li>
+                <li><strong>Gestión de Estados</strong>: Los admins y el staff pueden Aceptar o Denegar sugerencias.</li>
+                <li><strong>Anti-Crash</strong>: Reporta errores a un canal privado mediante Webhooks.</li>
             </ul>
         </section>
     </main>

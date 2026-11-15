@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad — Suggestions Bot — EstrellaStudios</title>
-    <meta name="description" content="Política de Privacidad del bot de sugerencias de EstrellaStudios.">
+    <meta name="description" content="Política de Privacidad del bot de sugerencias multi-servidor de EstrellaStudios.">
     <link rel="icon" href="../../assets/img/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="../../assets/img/logo.png">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -37,21 +37,30 @@
             </p>
 
             <h2>1. Datos que recopilamos</h2>
-            <p>Para proporcionar sus funcionalidades, el Bot almacena los siguientes datos:</p>
+            <p>Para proporcionar sus funcionalidades, el Bot almacena los siguientes datos, operando de forma independiente por cada servidor:</p>
+
+            <h3>Datos de configuración del servidor</h3>
+            <ul>
+                <li>ID del servidor (guild).</li>
+                <li>ID del canal de sugerencias configurado.</li>
+                <li>Idioma seleccionado (Español o Inglés).</li>
+                <li>IDs de los roles de Staff autorizados.</li>
+                <li>Configuración del embed (color y mensaje extra).</li>
+            </ul>
 
             <h3>Datos de sugerencias y votaciones</h3>
             <ul>
                 <li>ID del autor de la sugerencia.</li>
                 <li>Contenido de texto de la sugerencia.</li>
-                <li>ID del mensaje de Discord donde se publicó la sugerencia.</li>
-                <li>Votos positivos y negativos (solo el ID del usuario y el tipo de voto).</li>
+                <li>ID del mensaje de Discord donde se publicó.</li>
+                <li>Votos positivos y negativos (ID del usuario y tipo de voto).</li>
                 <li>Estado de la sugerencia (pendiente, aceptada, denegada).</li>
                 <li>Fecha de creación.</li>
             </ul>
 
             <h3>Datos de moderación</h3>
             <ul>
-                <li>Lista negra (Blacklist): ID de usuario bloqueado, razón y quién lo bloqueó.</li>
+                <li>Lista negra (Blacklist): ID de usuario bloqueado, razón, quién lo bloqueó y fecha.</li>
             </ul>
 
             <h3>Datos técnicos (Logs)</h3>
@@ -64,6 +73,8 @@
             <h2>2. Cómo usamos los datos</h2>
             <p>Los datos se usan exclusivamente para:</p>
             <ul>
+                <li>Mantener la configuración independiente de cada servidor.</li>
+                <li>Mostrar los embeds en el idioma correcto según el servidor.</li>
                 <li>Mantener el sistema de votación persistente (evitar votos duplicados).</li>
                 <li>Actualizar el diseño visual de la sugerencia (barras de progreso).</li>
                 <li>Gestionar la lista negra para prevenir abusos.</li>
@@ -86,6 +97,7 @@
             <h2>4. Cuánto tiempo se conservan</h2>
             <ul>
                 <li><strong>Sugerencias y votos</strong>: se conservan indefinidamente para mantener el historial del servidor, a menos que un administrador o el autor solicite su eliminación.</li>
+                <li><strong>Configuración</strong>: se conserva mientras el Bot permanezca en el servidor.</li>
                 <li><strong>Lista negra</strong>: hasta que un administrador decida remover al usuario.</li>
                 <li><strong>Logs Anti-Crash</strong>: Discord conserva los Webhooks según sus propios términos.</li>
             </ul>
