@@ -98,7 +98,6 @@ a:hover { color: var(--color-primary-hover); }
 }
 .btn:hover { transform: translateY(-1px); }
 
-/* Protegemos los botones para que no hereden el azul de los enlaces */
 a.btn-primary, .btn-primary {
     background: var(--color-primary); color: #fff;
     box-shadow: 0 4px 14px rgba(88,101,242,.3);
@@ -204,7 +203,7 @@ a.btn-ghost:hover, .btn-ghost:hover {
     border: 1px solid var(--color-border);
 }
 
-/* ============ ENLACES DE DOCUMENTACIÓN (TARJETAS RESTAURADAS) ============ */
+/* ============ ENLACES DE DOCUMENTACIÓN ============ */
 .links { display: flex; gap: 16px; margin-top: 20px; flex-wrap: wrap; }
 .link-card {
     flex: 1 1 220px;
@@ -225,14 +224,14 @@ a.btn-ghost:hover, .btn-ghost:hover {
 .link-card strong { color: var(--color-text); }
 .link-card span { color: var(--color-muted); font-size: .88rem; }
 
-/* ============ FECHA DE ACTUALIZACIÓN (RESALTADO SUTIL) ============ */
+/* ============ FECHA DE ACTUALIZACIÓN ============ */
 .last-updated {
     display: inline-block;
     font-size: 0.9rem;
-    color: var(--color-accent); /* Color dorado suave */
+    color: var(--color-accent);
     margin-bottom: 28px;
     font-weight: 500;
-    border-left: 3px solid var(--color-accent); /* Línea elegante a la izquierda */
+    border-left: 3px solid var(--color-accent);
     padding-left: 12px;
     letter-spacing: 0.2px;
 }
@@ -282,6 +281,40 @@ a.btn-ghost:hover, .btn-ghost:hover {
 .cmd-card p { color: var(--color-muted); font-size: .92rem; margin: 0; line-height: 1.5; }
 .no-results { text-align: center; color: var(--color-muted); padding: 40px 0; font-size: 1rem; }
 
+/* ============ WIDGET DE DISCORD BOT LIST (COMPACTO) ============ */
+.widget-wrapper {
+    display: inline-block; /* El contenedor se ajusta al tamaño del widget */
+    padding: 4px; /* Margen mínimo */
+    background: linear-gradient(135deg, rgba(88, 101, 242, 0.1) 0%, rgba(245, 185, 66, 0.05) 100%);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.widget-wrapper:hover {
+    border-color: var(--color-primary);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3), 0 4px 12px rgba(88, 101, 242, 0.2);
+}
+
+.widget-link {
+    display: block;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.widget-link:hover {
+    transform: scale(1.02);
+}
+
+.bot-widget-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
 /* ============ FOOTER ============ */
 .footer {
     border-top: 1px solid var(--color-border);
@@ -323,6 +356,8 @@ a.btn-ghost:hover, .btn-ghost:hover {
     .cmd-grid { grid-template-columns: 1fr; }
     .filter-btn { font-size: .82rem; padding: 6px 12px; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
+    
+    .widget-wrapper { padding: 3px; }
 }
 
 @media (max-width: 420px) {
