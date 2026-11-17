@@ -48,65 +48,113 @@
 
         <div class="filters" id="filters">
             <button class="filter-btn active" data-cat="all">Todos</button>
-            <button class="filter-btn" data-cat="users">👥 Usuarios</button>
-            <button class="filter-btn" data-cat="admin">🛡️ Administradores</button>
+            <button class="filter-btn" data-cat="users">👤 Usuarios</button>
+            <button class="filter-btn" data-cat="admin">🛡️ Administración</button>
+            <button class="filter-btn" data-cat="management">🛠️ Gestión</button>
+            <button class="filter-btn" data-cat="owner">🔒 Dueño</button>
         </div>
 
         <p id="no-results" class="no-results" style="display:none;">No se encontraron comandos con ese criterio.</p>
 
+        <!-- COMANDOS DE USUARIO -->
         <section class="cmd-category" data-cat="users">
-            <h2 class="cmd-title">👥 Usuarios</h2>
+            <h2 class="cmd-title">👤 Comandos de Usuario (Públicos)</h2>
+            <p class="section-subtitle" style="margin-top:-10px; margin-bottom:16px; font-size:0.9rem;">Cualquier usuario puede usarlos.</p>
             <div class="cmd-grid">
                 <div class="cmd-card" data-name="sugerir suggest">
-                    <code class="cmd-name">/sugerir</code> <code class="cmd-name">/suggest</code>
-                    <p>Abre un formulario para enviar una nueva idea al canal de sugerencias.</p>
+                    <code class="cmd-name">/sugerir</code>
+                    <p>Abre un formulario (modal) para que el usuario escriba su sugerencia. El bot la publica en el canal configurado con los botones de votación.</p>
                 </div>
                 <div class="cmd-card" data-name="help">
                     <code class="cmd-name">/help</code>
-                    <p>Muestra la lista de comandos y el enlace a las políticas de privacidad.</p>
+                    <p>Muestra un menú con todos los comandos disponibles y un botón con el enlace a las Políticas de Privacidad.</p>
                 </div>
                 <div class="cmd-card" data-name="ping">
                     <code class="cmd-name">/ping</code>
-                    <p>Muestra la latencia del bot y de la base de datos.</p>
+                    <p>Muestra la latencia del bot (conexión con Discord) y de la base de datos (PostgreSQL).</p>
                 </div>
             </div>
         </section>
 
+        <!-- COMANDOS DE ADMINISTRACIÓN -->
         <section class="cmd-category" data-cat="admin">
-            <h2 class="cmd-title">🛡️ Administradores y Staff</h2>
-            <p class="section-subtitle" style="margin-top:-10px; margin-bottom:16px; font-size:0.9rem;">Requieren permisos de Administrador o roles de Staff configurados.</p>
+            <h2 class="cmd-title">🛡️ Comandos de Administrador</h2>
+            <p class="section-subtitle" style="margin-top:-10px; margin-bottom:16px; font-size:0.9rem;">Requieren permiso de Administrador en el servidor.</p>
             <div class="cmd-grid">
                 <div class="cmd-card" data-name="setup">
-                    <code class="cmd-name">/setup</code>
-                    <p>Configura el canal de sugerencias y el idioma (es/en) para el servidor.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:start;">
+                        <code class="cmd-name">/setup</code>
+                        <span style="font-size:0.75rem; color:var(--color-muted); border:1px solid var(--color-border); padding:2px 6px; border-radius:4px;">Sin voto</span>
+                    </div>
+                    <p>Configura el canal donde se enviarán las sugerencias y elige el idioma del servidor (Español o Inglés).</p>
                 </div>
                 <div class="cmd-card" data-name="config">
-                    <code class="cmd-name">/config</code>
-                    <p>Muestra un resumen de la configuración actual del servidor (canal, idioma, staff, etc).</p>
+                    <div style="display:flex; justify-content:space-between; align-items:start;">
+                        <code class="cmd-name">/config</code>
+                        <span style="font-size:0.75rem; color:var(--color-muted); border:1px solid var(--color-border); padding:2px 6px; border-radius:4px;">Sin voto</span>
+                    </div>
+                    <p>Muestra un resumen de la configuración actual del servidor (canal, idioma, roles de staff, color del embed y mensaje extra).</p>
                 </div>
                 <div class="cmd-card" data-name="setup-staff">
-                    <code class="cmd-name">/setup-staff</code>
-                    <p>Añade o quita un rol que pueda gestionar sugerencias (además de los admins).</p>
+                    <div style="display:flex; justify-content:space-between; align-items:start;">
+                        <code class="cmd-name">/setup-staff</code>
+                        <span style="font-size:0.75rem; color:var(--color-accent); border:1px solid rgba(245,185,66,.3); padding:2px 6px; border-radius:4px; background:rgba(245,185,66,.1);">Requiere voto</span>
+                    </div>
+                    <p>Añade o quita roles de Discord que podrán gestionar las sugerencias (además de los Admins).</p>
                 </div>
                 <div class="cmd-card" data-name="custom-embed">
-                    <code class="cmd-name">/custom-embed</code>
-                    <p>Personaliza el color del embed y añade un mensaje sutil extra.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:start;">
+                        <code class="cmd-name">/custom-embed</code>
+                        <span style="font-size:0.75rem; color:var(--color-accent); border:1px solid rgba(245,185,66,.3); padding:2px 6px; border-radius:4px; background:rgba(245,185,66,.1);">Requiere voto</span>
+                    </div>
+                    <p>Personaliza el diseño de las sugerencias. Permite cambiar el color (en HEX) y añadir un mensaje sutil extra al pie del embed.</p>
                 </div>
+                <div class="cmd-card" data-name="reset-setup">
+                    <div style="display:flex; justify-content:space-between; align-items:start;">
+                        <code class="cmd-name">/reset-setup</code>
+                        <span style="font-size:0.75rem; color:var(--color-accent); border:1px solid rgba(245,185,66,.3); padding:2px 6px; border-radius:4px; background:rgba(245,185,66,.1);">Requiere voto</span>
+                    </div>
+                    <p>Borra toda la configuración del servidor (canal, idioma, staff y personalización). No borra las sugerencias ni la lista negra.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMANDOS DE GESTIÓN -->
+        <section class="cmd-category" data-cat="management">
+            <h2 class="cmd-title">🛠️ Comandos de Gestión</h2>
+            <p class="section-subtitle" style="margin-top:-10px; margin-bottom:16px; font-size:0.9rem;">Pueden usarlos los Administradores y los roles añadidos con /setup-staff.</p>
+            <div class="cmd-grid">
                 <div class="cmd-card" data-name="suggestion_accept">
                     <code class="cmd-name">/suggestion_accept</code>
-                    <p>Acepta una sugerencia. El mensaje se vuelve verde y se cierran los votos.</p>
+                    <p>Acepta una sugerencia usando su ID. El embed cambia a verde, dice "ACEPTADA" y se eliminan los botones de votación.</p>
                 </div>
                 <div class="cmd-card" data-name="suggestion_deny">
                     <code class="cmd-name">/suggestion_deny</code>
-                    <p>Deniega una sugerencia. El mensaje se vuelve rojo y se cierran los votos.</p>
+                    <p>Deniega una sugerencia usando su ID. El embed cambia a rojo, dice "DENEGADA", se eliminan los botones y se puede añadir una razón.</p>
                 </div>
                 <div class="cmd-card" data-name="suggestion_blacklist_add">
                     <code class="cmd-name">/suggestion_blacklist_add</code>
-                    <p>Bloquea a un usuario para que no pueda publicar más sugerencias.</p>
+                    <p>Añade a un usuario a la lista negra del servidor para que no pueda publicar sugerencias.</p>
                 </div>
                 <div class="cmd-card" data-name="suggestion_blacklist_remove">
                     <code class="cmd-name">/suggestion_blacklist_remove</code>
-                    <p>Remueve a un usuario de la lista negra.</p>
+                    <p>Remueve a un usuario de la lista negra del servidor.</p>
+                </div>
+                <div class="cmd-card" data-name="blacklist-list">
+                    <code class="cmd-name">/blacklist-list</code>
+                    <p>Muestra una lista paginada (con botones ◀ y ▶) de todos los usuarios en la lista negra, con la razón y la fecha de bloqueo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMANDOS DE DUEÑO -->
+        <section class="cmd-category" data-cat="owner">
+            <h2 class="cmd-title">🔒 Comandos de Dueño del Bot</h2>
+            <p class="section-subtitle" style="margin-top:-10px; margin-bottom:16px; font-size:0.9rem;">Ocultos para todos los demás usuarios. Solo el dueño puede verlos y usarlos.</p>
+            <div class="cmd-grid">
+                <div class="cmd-card" data-name="stats">
+                    <code class="cmd-name">/stats</code>
+                    <p>Muestra estadísticas internas del bot: número de servidores, usuarios, canales y tiempo activo.</p>
                 </div>
             </div>
         </section>
