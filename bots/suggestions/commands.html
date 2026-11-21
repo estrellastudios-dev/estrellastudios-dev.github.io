@@ -43,7 +43,7 @@
 
     <main class="container section">
         <div class="search-wrap">
-            <input type="text" id="cmd-search" class="search-input" placeholder="🔍 Buscar comando... (ej. sugerir, setup, blacklist)">
+            <input type="text" id="cmd-search" class="search-input" placeholder="🔍 Buscar comando... (ej. sugerir, setup, chat)">
         </div>
 
         <div class="filters" id="filters">
@@ -108,6 +108,13 @@
                         <span style="font-size:0.75rem; color:var(--color-accent); border:1px solid rgba(245,185,66,.3); padding:2px 6px; border-radius:4px; background:rgba(245,185,66,.1);">Requiere voto</span>
                     </div>
                     <p>Personaliza el diseño de las sugerencias. Permite cambiar el color (en HEX) y añadir un mensaje sutil extra al pie del embed.</p>
+                </div>
+                <div class="cmd-card" data-name="toggle-chat">
+                    <div style="display:flex; justify-content:space-between; align-items:start;">
+                        <code class="cmd-name">/toggle-chat</code>
+                        <span style="font-size:0.75rem; color:var(--color-accent); border:1px solid rgba(245,185,66,.3); padding:2px 6px; border-radius:4px; background:rgba(245,185,66,.1);">Requiere voto</span>
+                    </div>
+                    <p>Activa o desactiva el modo chat. Si está activo, los usuarios pueden escribir directamente en el canal para sugerir sin usar el comando.</p>
                 </div>
                 <div class="cmd-card" data-name="reset-setup">
                     <div style="display:flex; justify-content:space-between; align-items:start;">
