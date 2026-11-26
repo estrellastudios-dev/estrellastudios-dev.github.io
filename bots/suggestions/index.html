@@ -43,18 +43,49 @@
 
     <main class="container section">
         <section class="card">
-            <h2>Comandos</h2>
-            <p>Descubre todos los comandos disponibles para configurar y gestionar sugerencias en tu servidor.</p>
+            <h2>Mejora la comunicación en tu servidor</h2>
+            <p>Este bot está diseñado para permitir que tus usuarios propongan ideas y que la comunidad entera participe votando, mientras el staff mantiene el control total de las decisiones.</p>
             <a href="commands.html" class="btn btn-primary" style="margin-top:12px;">
                 Ver todos los comandos
             </a>
         </section>
 
         <section class="card">
+            <h2>¿Cómo funciona?</h2>
+            
+            <div style="margin-top: 20px;">
+                <h3>1. Envía una idea</h3>
+                <p>Cualquier usuario puede usar el comando <code>/sugerir</code> para enviar una propuesta.</p>
+                
+                <h3>2. La comunidad vota</h3>
+                <p>La sugerencia se publica en un canal con botones para <strong>Votar a Favor ✅</strong> o <strong>Votar en Contra ❌</strong>. Los resultados y porcentajes se actualizan en tiempo real.</p>
+                
+                <h3>3. El staff decide</h3>
+                <p>Los administradores revisan la propuesta y pueden usar comandos para <strong>Aceptarla</strong> (el mensaje se vuelve verde) o <strong>Rechazarla</strong> (se vuelve rojo), cerrando la votación automáticamente.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Características destacadas</h2>
+            <ul class="features">
+                <li><strong>Diseño elegante</strong>: Las sugerencias se muestran en embeds limpios con barras de progreso para ver el porcentaje de votos.</li>
+                <li><strong>Persistencia total</strong>: Los votos se guardan en una base de datos. Si el bot se reinicia, ¡nadie pierde su voto!</li>
+                <li><strong>Anti-Doble Voto</strong>: Cada usuario solo puede votar una vez. Si cambia de opinión, el bot actualiza su voto automáticamente.</li>
+                <li><strong>Control de Spam</strong>: Incluye un sistema de <strong>Lista Negra (Blacklist)</strong> para que los administradores puedan bloquear a usuarios que hagan mal uso del sistema.</li>
+                <li><strong>Bilingüe</strong>: El bot se adapta al idioma del servidor. Puedes configurarlo en <strong>Español</strong> o <strong>Inglés</strong> fácilmente.</li>
+                <li><strong>Roles de Staff Personalizados</strong>: Añade roles específicos (además de los Admins) para gestionar sugerencias con <code>/setup-staff</code>.</li>
+                <li><strong>Personalización del Embed</strong>: Cambia el color del embed y añade un mensaje sutil al pie con <code>/custom-embed</code>.</li>
+                <li><strong>Modo Chat</strong>: Los usuarios también pueden escribir directamente en el canal para sugerir (actívalo con <code>/toggle-chat</code>).</li>
+                <li><strong>Panel de Configuración</strong>: Consulta la configuración del bot en tu servidor de un vistazo con <code>/config</code>.</li>
+                <li><strong>Reinicio Seguro</strong>: Empieza de cero sin perder las sugerencias ni la lista negra con <code>/reset-setup</code>.</li>
+            </ul>
+        </section>
+
+        <section class="card">
             <h2>Estado en tiempo real</h2>
             <p>Apoya a Suggestions Bot y ayúdanos a crecer votando por él en DiscoListing:</p>
             
-            <!-- WIDGET DE DISCOLISTING (IFRAME ACTUALIZADO) -->
+            <!-- WIDGET DE DISCOLISTING -->
             <div style="margin-top: 20px; max-width: 420px; width: 100%;">
                 <iframe 
                     src="https://discolisting.com/embed/bot/suggestions-bot?template=spotlight&theme=dark&accent=7c6cf2&corners=round&font=system&background=gradient&bgStart=190c48&bgEnd=000000&textColor=f4f3fa&angle=135&backgroundOpacity=100&show=admvtb&buttons=join%2Cvote%2Cview&primary=vote" 
@@ -81,20 +112,6 @@
                     <span>Consulta las reglas y condiciones de uso del bot.</span>
                 </a>
             </div>
-        </section>
-
-        <section class="card">
-            <h2>Características principales</h2>
-            <ul class="features">
-                <li><strong>Multi-Servidor</strong>: Cada servidor tiene su propio canal, idioma y lista negra sin mezclarse.</li>
-                <li><strong>Idioma por Servidor</strong>: Soporte nativo para Español e Inglés (configurable con <code>/setup</code>).</li>
-                <li><strong>Personalización Total</strong>: Cambia el color del embed, añade mensajes extra y configura roles de staff.</li>
-                <li><strong>Votación Persistente</strong>: Los votos se guardan en PostgreSQL y sobreviven a los reinicios.</li>
-                <li><strong>Embeds Modernos</strong>: Mensajes visuales con barras de progreso y porcentajes en tiempo real.</li>
-                <li><strong>Anti-Doble Voto</strong>: Un usuario solo puede votar una vez por sugerencia.</li>
-                <li><strong>Gestión de Estados</strong>: Los admins y el staff pueden Aceptar o Denegar sugerencias.</li>
-                <li><strong>Anti-Crash</strong>: Reporta errores a un canal privado mediante Webhooks.</li>
-            </ul>
         </section>
     </main>
 
